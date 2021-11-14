@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: column wrap;
+    min-height: 50vh;
+    font: 14px/1.5 "Spoqa Han Sans", Sans-Serif;
+    transition: all 0.3s linear;
+  }
+  
+  .boy {
+    margin: 0;
+    background: url("character-jump-outlines.png") no-repeat;
+    width: 145px;
+    height: 220px;
+  }
+  
+  .boy.jump {
+    animation: jump 0.4s steps(2);
+  }
+  
+  .info {
+    margin-bottom: 6vh;
+  }
+  
+  @media (min-width: 60em) {
+    .info {
+      margin-bottom: 20vh;
+    }
+  }
+  
+  .info kbd {
+    border-radius: 5px;
+    padding: 0.1em 0.3em;
+    vertical-align: 1.5px;
+    line-height: 1;
+    background: #f0f0f0;
+  }
+  
+  @keyframes flow {
+    to {
+      transform: translateX(-110vw);
+    }
+  }
+  
+  @keyframes jump {
+    to {
+      background-position: 200% 0;
+    }
+  }

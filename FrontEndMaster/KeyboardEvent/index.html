@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+<body>
+      <figure class="boy" id="boy" aria-label="서있는 소년"></figure>
+      
+      <p class="info">화살표 <kbd>up</kbd>, <kbd>left</kbd>, <kbd>right</kbd> 키를 눌러보세요.</p>
+      
+</body>
+<script type="text/javascript" src="script.js"></script> 
+<!-- script를 head안에 위치시켰더니 에러 발생 -->
+<!-- Uncaught TypeError: Cannot read property 'addEventListener' of undefined -->
+<!-- 에러 발생 이유: HTML이 모두 로드 되기 전에 자바스크립트 영역에서 HTML을 참조하기 때문.
+     즉, addEventListenr에서 HTML 태그를 참조할 수가 없었기 때문에 null을 참조하게 됐고 에러가 발생하는 것.
+     따라서, script를 </body> 아래에 위치시켜서 HTML의 로드가 모두 완료된 후, script를 불러서 해결함 -->
+
+</html>
